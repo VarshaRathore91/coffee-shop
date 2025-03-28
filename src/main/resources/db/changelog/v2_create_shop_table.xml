@@ -1,0 +1,22 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.8.xsd">
+
+    <changeSet id="2" author="developer">
+        <createTable tableName="shop">
+            <column name="id" type="INT">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)" />
+            <column name="location" type="VARCHAR(500)" />
+            <column name="contact_number" type="VARCHAR(20)" />
+            <column name="menu" type="TEXT" />
+            <column name="queue_count" type="INT" />
+            <column name="queue_size" type="INT" />
+            <column name="opening_time" type="TIME" />
+            <column name="closing_time" type="TIME" />
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
